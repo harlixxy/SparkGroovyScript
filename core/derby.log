@@ -1,0 +1,16 @@
+----------------------------------------------------------------
+Tue Feb 28 19:34:32 CST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-015a-8480-1bc5-000005ed6a10 
+on database directory C:\dowload\bigdata_soft\sourcecode\spark-2.1.0\core\target\JavaJdbcRDDSuiteDb with class loader sun.misc.Launcher$AppClassLoader@4e25154f 
+Loaded from file:/C:/Users/Administrator/repo/org/apache/derby/derby/10.12.1.1/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_111-b14
+user.dir=C:\dowload\bigdata_soft\sourcecode\spark-2.1.0\core
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Feb 28 19:34:34 CST 2017:
+Shutting down instance a816c00e-015a-8480-1bc5-000005ed6a10 on database directory C:\dowload\bigdata_soft\sourcecode\spark-2.1.0\core\target\JavaJdbcRDDSuiteDb with class loader sun.misc.Launcher$AppClassLoader@4e25154f 
