@@ -1,0 +1,5 @@
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/test/java/org/apache/spark/unsafe/hash/Murmur3_x86_32Suite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/test/java/org/apache/spark/unsafe/array/LongArraySuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/test/java/org/apache/spark/unsafe/PlatformUtilSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/test/java/org/apache/spark/unsafe/types/CalendarIntervalSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/test/java/org/apache/spark/unsafe/types/UTF8StringSuite.java

@@ -1,0 +1,5 @@
+/usr/local/bigdata/sparksource/SparkGroovyScript/launcher/src/test/java/org/apache/spark/launcher/SparkSubmitOptionParserSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/launcher/src/test/java/org/apache/spark/launcher/LauncherServerSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/launcher/src/test/java/org/apache/spark/launcher/CommandBuilderUtilsSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/launcher/src/test/java/org/apache/spark/launcher/SparkSubmitCommandBuilderSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/launcher/src/test/java/org/apache/spark/launcher/BaseSuite.java

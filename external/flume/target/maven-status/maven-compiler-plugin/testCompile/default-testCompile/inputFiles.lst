@@ -1,0 +1,3 @@
+/usr/local/bigdata/sparksource/spark-2.1.0/external/flume/src/test/java/org/apache/spark/streaming/LocalJavaStreamingContext.java
+/usr/local/bigdata/sparksource/spark-2.1.0/external/flume/src/test/java/org/apache/spark/streaming/flume/JavaFlumeStreamSuite.java
+/usr/local/bigdata/sparksource/spark-2.1.0/external/flume/src/test/java/org/apache/spark/streaming/flume/JavaFlumePollingStreamSuite.java

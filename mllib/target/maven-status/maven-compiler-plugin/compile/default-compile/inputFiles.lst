@@ -1,0 +1,5 @@
+/usr/local/bigdata/sparksource/spark-2.1.0/mllib/src/main/scala/org/apache/spark/mllib/package-info.java
+/usr/local/bigdata/sparksource/spark-2.1.0/mllib/src/main/scala/org/apache/spark/ml/attribute/package-info.java
+/usr/local/bigdata/sparksource/spark-2.1.0/mllib/src/main/scala/org/apache/spark/mllib/JavaPackage.java
+/usr/local/bigdata/sparksource/spark-2.1.0/mllib/src/main/scala/org/apache/spark/ml/package-info.java
+/usr/local/bigdata/sparksource/spark-2.1.0/mllib/src/main/scala/org/apache/spark/ml/feature/package-info.java

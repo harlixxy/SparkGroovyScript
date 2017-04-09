@@ -1,0 +1,10 @@
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-shuffle/src/test/java/org/apache/spark/network/shuffle/ExternalShuffleSecuritySuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-shuffle/src/test/java/org/apache/spark/network/shuffle/RetryingBlockFetcherSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-shuffle/src/test/java/org/apache/spark/network/shuffle/ExternalShuffleCleanupSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-shuffle/src/test/java/org/apache/spark/network/shuffle/OneForOneBlockFetcherSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-shuffle/src/test/java/org/apache/spark/network/shuffle/TestShuffleDataContext.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-shuffle/src/test/java/org/apache/spark/network/shuffle/BlockTransferMessagesSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-shuffle/src/test/java/org/apache/spark/network/shuffle/ExternalShuffleBlockHandlerSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-shuffle/src/test/java/org/apache/spark/network/shuffle/ExternalShuffleBlockResolverSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-shuffle/src/test/java/org/apache/spark/network/sasl/SaslIntegrationSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-shuffle/src/test/java/org/apache/spark/network/shuffle/ExternalShuffleIntegrationSuite.java

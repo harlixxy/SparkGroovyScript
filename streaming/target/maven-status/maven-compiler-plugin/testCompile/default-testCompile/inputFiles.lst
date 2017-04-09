@@ -1,0 +1,8 @@
+/usr/local/bigdata/sparksource/SparkGroovyScript/streaming/src/test/java/org/apache/spark/streaming/JavaMapWithStateSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/streaming/src/test/java/org/apache/spark/streaming/JavaAPISuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/streaming/src/test/java/org/apache/spark/streaming/JavaReceiverAPISuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/streaming/src/test/java/org/apache/spark/streaming/JavaDurationSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/streaming/src/test/java/org/apache/spark/streaming/JavaTimeSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/streaming/src/test/java/org/apache/spark/streaming/JavaStreamingListenerAPISuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/streaming/src/test/java/org/apache/spark/streaming/LocalJavaStreamingContext.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/streaming/src/test/java/org/apache/spark/streaming/JavaWriteAheadLogSuite.java

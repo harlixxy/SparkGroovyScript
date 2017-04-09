@@ -1,0 +1,13 @@
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/RpcIntegrationSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/TestManagedBuffer.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/TestUtils.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/ChunkFetchIntegrationSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/TransportResponseHandlerSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/ProtocolSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/TransportClientFactorySuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/StreamSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/server/OneForOneStreamManagerSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/protocol/MessageWithHeaderSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/RequestTimeoutIntegrationSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/util/TransportFrameDecoderSuite.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/network-common/src/test/java/org/apache/spark/network/sasl/SparkSaslSuite.java

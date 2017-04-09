@@ -85,7 +85,6 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
-            <version>1.4.0</version>
             <executions>
               <execution>
                 <id>sparkr-pkg</id>
@@ -93,13 +92,10 @@
                 <goals>
                   <goal>exec</goal>
                 </goals>
-                <configuration>
-                  <executable>../R/install-dev.sh</executable>
-                </configuration>
               </execution>
             </executions>
             <configuration>
-              <executable>../R/install-dev.sh</executable>
+              <executable>..${file.separator}R${file.separator}install-dev${script.extension}</executable>
             </configuration>
           </plugin>
         </plugins>

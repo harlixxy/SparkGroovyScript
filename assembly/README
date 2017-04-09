@@ -1,0 +1,17 @@
+This is an assembly module for Spark project.
+
+It creates a single tar.gz file that includes all needed dependency of the project
+创建一个tar.gz文件，并且包含Spark项目所有需要的依赖（仅仅除了 org.apache.hadoop.* jars外），另外，尤其需要说明的是org.apache.hadoop.* jars
+可以从部署好的hadoop集群中获取到
+except for org.apache.hadoop.* jars that are supposed to be available from the
+deployed Hadoop cluster.
+
+This module is off by default. To activate it specify the profile in the command line
+  -Pbigtop-dist
+
+If you need to build an assembly for a different version of Hadoop the
+hadoop-version system property needs to be set as in this example:
+  -Dhadoop.version=2.0.6-alpha
+如果你需要根据hadoop的版本来编译对应的assembly，需要在编译的时候指定该参数
+-Dhadoop.version=2.0.6-alpha
+-Pbigtop-dist

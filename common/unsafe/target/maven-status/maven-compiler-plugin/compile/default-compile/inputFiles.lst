@@ -1,0 +1,16 @@
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/hash/Murmur3_x86_32.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/array/ByteArrayMethods.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/memory/HeapMemoryAllocator.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/types/ByteArray.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/memory/UnsafeMemoryAllocator.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/UnsafeAlignedOffset.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/memory/MemoryLocation.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/types/CalendarInterval.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/KVIterator.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/memory/MemoryAllocator.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/types/UTF8String.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/array/LongArray.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/bitset/BitSetMethods.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/memory/MemoryBlock.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/sql/catalyst/expressions/HiveHasher.java
+/usr/local/bigdata/sparksource/SparkGroovyScript/common/unsafe/src/main/java/org/apache/spark/unsafe/Platform.java
