@@ -37,7 +37,7 @@ private[spark]class GroovyScriptRDD[T: ClassTag](prev: RDD[T],
 
 
          var results: util.Map[String, _]=new util.HashMap[String,Object]()
-         
+
          val executor = new Executor(scriptTexts);
          executor.prepare();
          var now = 1300000000000L
@@ -91,19 +91,24 @@ private[spark]class GroovyScriptRDD[T: ClassTag](prev: RDD[T],
       println("elem"+elem)
       val splits = elem.toString.split(",")
       for(keyAndValue<- splits){
-        preRddMap.put(keyAndValue.split(":")(0),java.lang.Long.parseLong(keyAndValue.split(":")(1)))
+        val value = java.lang.Long.parseLong(keyAndValue.split(":")(1))
+        val key = keyAndValue.split(":")(0)
+        println("in is value"+value)
+        println("in is key"+key)
+        preRddMap.put(key,value)
       }
 
     }
-    println(preRddMap)
+    println("preRddMap"+preRddMap)
     val resHashMap = new util.HashMap[String, DataPoint]() {
       val sets:util.Set[String] = executor.getIndefine.keySet
       val keysiterator = sets.iterator()
+
       while (keysiterator.hasNext){
         val next = keysiterator.next()
               println("next is"+next)
               println("get next"+preRddMap.get(next))
-              put(next,new DataPoint(timestamp,12))
+              put(next,new DataPoint(timestamp,preRddMap.get(next)))
       }
     }
     return resHashMap

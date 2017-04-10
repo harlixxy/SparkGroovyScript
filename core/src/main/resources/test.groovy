@@ -8,15 +8,20 @@ require{
     v0 is "chu su du"
     t  is "time for run"
 }
+status{
+   pian is "pian cha"
+}
 
 onInit{
-    a=0
-    v0=0
-    t=0
+   pian = 200
 }
 output{
     s is "wei yi"
 }
 task{
-    s=v0*t +a*t*t/2
+
+    System.out.println("aaaaaaaaaaa:"+a)
+    System.out.println("v0v0v0v0v0v0:"+v0)
+    System.out.println("tttttttttttt:"+t)
+    s=v0*t +a*t*t/2 + pian
 }
