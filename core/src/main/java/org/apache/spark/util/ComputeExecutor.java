@@ -53,7 +53,6 @@ public class ComputeExecutor {
         Map<String,?> res = null;
         try {
             res = executor.run(context,hashMap);
-            System.out.println(res+"kkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
           return res;
         }catch (ScriptRTException e){
             e.printStackTrace();

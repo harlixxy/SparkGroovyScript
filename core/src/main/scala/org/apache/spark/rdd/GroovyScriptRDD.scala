@@ -25,23 +25,15 @@ private[spark]class GroovyScriptRDD[T: ClassTag](prev: RDD[T],
 
 
    def compute(split: Partition, context: TaskContext): Iterator[String] = {
-
-
          /**
            * 将上一个rdd的集合传入下一个groovy算法的输入参数中去
            *
            */
          TaskContext.setTaskContext(context)
-
          val iterator: Iterator[Any] = firstParent[T].iterator(split,context)
-
-
-         var results: util.Map[String, _]=new util.HashMap[String,Object]()
 
          val executor = new Executor(scriptTexts);
          executor.prepare();
-         var now = 1300000000000L
-         now = System.currentTimeMillis()
          var ctx1 = executor.newContext();
           //enumStatus是传进来的参数
          ctx1.restore(enumStatus)
@@ -51,69 +43,56 @@ private[spark]class GroovyScriptRDD[T: ClassTag](prev: RDD[T],
            enumStatus = ctx1.getStatusValue();
          }
          ctx1.restore(enumStatus)
-         val timestamp = now
-         val computeExecutor = new ComputeExecutor(timestamp,executor)
-         println("first"+iterator)
-         val  hashmapres = getDataPointHashMap(requireName,iterator,executor,timestamp)
-         results = computeExecutor.executorStartRun(executor,hashmapres,ctx1)
+         var arrayList = new util.ArrayList[util.Map[String,_]]()
 
-         val lines = results
-         val keys = lines.keySet()
-         val values = lines.values()
-         val keysiterator: util.Iterator[String] = keys.iterator();
-         val valuesIterator:util.Iterator[_] = values.iterator();
+         for(elem <- iterator){
+           var now = 1300000000000L
+           now = System.currentTimeMillis()
+           val timestamp = now
+           val computeExecutor = new ComputeExecutor(timestamp,executor)
+           val  hashmapres = getDataPointHashMap(requireName,elem,executor,timestamp)
+           val result:java.util.Map[String,_] = computeExecutor.executorStartRun(executor,hashmapres,ctx1)
+           arrayList.add(result)
 
-     //返回结
-         var resIterator:Iterator[String] = new Iterator[String] {
+         }
+
+         val javaIterator = arrayList.iterator()
+
+         new Iterator[String] {
            def next(): String = {
              if (!hasNext()) {
                throw new NoSuchElementException()
              }
-             lines.values().toString
+             javaIterator.next().toString
            }
            def hasNext(): Boolean = {
-             val result = if (keys.iterator().hasNext) {
+             val result = if (javaIterator.hasNext) {
                true
              } else {
-
                false
              }
              result
            }
          }
-     //返回结
-         resIterator
+
+         //返回结
+
   }//compute 结束了
-  def getDataPointHashMap(requireName:util.HashMap[String,Object], iterator: Iterator[Any],executor: Executor,timestamp:Long) : util.HashMap[String,DataPoint] ={
-    val preRddMap = new util.HashMap[String,java.lang.Long]()
-
-    for(elem <- iterator){
-      println("elem"+elem)
-      val splits = elem.toString.split(",")
-      for(keyAndValue<- splits){
-        val value = java.lang.Long.parseLong(keyAndValue.split(":")(1))
-        val key = keyAndValue.split(":")(0)
-        println("in is value"+value)
-        println("in is key"+key)
-        preRddMap.put(key,value)
-      }
-
-    }
-    println("preRddMap"+preRddMap)
-    val resHashMap = new util.HashMap[String, DataPoint]() {
-      val sets:util.Set[String] = executor.getIndefine.keySet
-      val keysiterator = sets.iterator()
-
-      while (keysiterator.hasNext){
-        val next = keysiterator.next()
-              println("next is"+next)
-              println("get next"+preRddMap.get(next))
-              put(next,new DataPoint(timestamp,preRddMap.get(next)))
+  def getDataPointHashMap(requireName:util.HashMap[String,Object], line: Any,executor: Executor,timestamp:Long) : util.HashMap[String,DataPoint] ={
+      val resHashMap = new util.HashMap[String, DataPoint]() {
+      val requireKeys:util.Set[String] = executor.getIndefine.keySet
+      val mapAndVlaues = line.toString.split(",")
+      for(mapAndValue<-mapAndVlaues){
+        val key = mapAndValue.split(":")(0)
+        val value = mapAndValue.split(":")(1)
+        if(requireKeys.contains(key)){
+          put(key,new DataPoint(timestamp,java.lang.Double.parseDouble(value)))
+        }else{
+          System.err.println("no this require key , please check the require ")
+        }
       }
     }
     return resHashMap
   }
 }
-import org.apache.spark.internal.Logging
-object GroovyScriptRDD extends Logging{
-}
+

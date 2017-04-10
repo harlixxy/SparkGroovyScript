@@ -68,7 +68,7 @@ private[spark] class PipedRDD[T: ClassTag](
    //ProcessBuilder是关键  pb
 
 
-    println(44)
+
     val pb = new ProcessBuilder(command.asJava)
     // Add the environmental variables to the process.添加需要的环境变量
     val currentEnvVars = pb.environment()//当前的环境变量
@@ -148,9 +148,10 @@ private[spark] class PipedRDD[T: ClassTag](
             printPipeContext(out.println)
           }
           for (elem <- firstParent[T].iterator(split, context)) {
+            println(elem)
+            println("elem elem elem elem elem elem ")
             if (printRDDElement != null) {
-              println(elem)
-              println("elem elem elem elem elem elem ")
+
               printRDDElement(elem, out.println)
             } else {
               out.println(elem)
@@ -228,5 +229,4 @@ private object PipedRDD {
     println(buf)
     buf
   }
-  println(444)
 }

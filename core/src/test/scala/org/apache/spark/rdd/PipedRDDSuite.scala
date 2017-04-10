@@ -35,20 +35,16 @@ class PipedRDDSuite extends SparkFunSuite with SharedSparkContext {
 
   test("basic pipe") {
     if (testCommandAvailable("cat")) {
-      val nums = sc.makeRDD(Array(1, 2, 3, 4), 2)
+      val nums = sc.makeRDD(Array("a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4"
+        ,"a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4"), 2)
 
       val piped = nums.pipe("cat")
-      println(44)
       /**
         * cat 1 2 3 4
         */
       val c = piped.collect()
-      System.out.print(c.length)
-      assert(c.size === 4)
-      assert(c(0) === "1")
-      assert(c(1) === "2")
-      assert(c(2) === "3")
-      assert(c(3) === "4")
+      assert(c.size === 13)
+
     }
   }
 

@@ -17,11 +17,11 @@ onInit{
 }
 output{
     s is "wei yi"
+    s1 is "wei yi 2"
 }
 task{
 
-    System.out.println("aaaaaaaaaaa:"+a)
-    System.out.println("v0v0v0v0v0v0:"+v0)
-    System.out.println("tttttttttttt:"+t)
-    s=v0*t +a*t*t/2 + pian
+
+    s=v0*t +a*t*t + pian
+    s1 = s + 200
 }

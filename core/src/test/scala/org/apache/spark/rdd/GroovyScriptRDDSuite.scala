@@ -39,7 +39,7 @@ class GroovyScriptRDDSuite extends SparkFunSuite with SharedSparkContext {
       val url = Resources.getResource("Rule/rule8.groovy")
       val scriptTexts = Resources.toString(url, Charsets.UTF_8)
       //require
-      val lines = sc.makeRDD(Array("devStatus:2342,alm1:4232,alm1:434,alm2:5434,alm3:2342,alm4:2342,alm5:434,alm6:5434,alm7:2342,alm8:434,alm9:2342,fengxang:434,yeYali:5434,yeYali:444,cangwWd:4434"))
+      val lines = sc.makeRDD(Array("devStatus:2342,alm1:4232,alm1:434,alm2:5434,alm3:2342,alm4:2342,alm5:434,alm6:5434,alm7:2342,alm8:434,alm9:2342,fengxang:434,yeYali:5434,yeYali:444,cangwWd:4434"),1)
       //enumStatus环境变量
       var s:util.Map[String,Object] = new util.HashMap[String,Object]()
       //require 输入字段名称
@@ -53,9 +53,11 @@ class GroovyScriptRDDSuite extends SparkFunSuite with SharedSparkContext {
     val url = Resources.getResource("test.groovy")
     val scriptTexts = Resources.toString(url, Charsets.UTF_8)
     val lines = sc.makeRDD(Array("a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4"
-    ,"a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4"),2)
+    ,"a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4"),1)
     //compute
-    val res = lines.groovyCompute(scriptTexts)
+    val maps = lines.map(line => line)
+
+    val res = maps.groovyCompute(scriptTexts)
     val resarray = res.collect()
     resarray.foreach(println)
     assert("a"==="a")
