@@ -34,10 +34,10 @@
   <url>http://spark.apache.org/</url>
 <repositories>
     <repository>
-      <id>tongfang</id>
+      <id>sparkgui</id>
       <!-- This should be at top, it makes maven try the central repo first and then others and hence faster dep resolution -->
-      <name>script</name>
-      <url>http://192.168.112.128:8081/nexus/content/repositories/tongfang/</url>
+      <name>groovyscript</name>
+      <url>http://119.23.77.149:8081/nexus/content/repositories/sparkgui/</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -377,11 +377,7 @@
                         <version>0.2.0</version>
                         <scope>compile</scope>
                       </dependency>
-                      <dependency>
-                        <groupId>com.org.tongfang.script.groovy</groupId>
-                        <artifactId>stressAnalysis</artifactId>
-                        <version>0.2.0</version>
-                      </dependency>
+
     <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all -->
                       <dependency>
                         <groupId>org.codehaus.groovy</groupId>
@@ -389,27 +385,6 @@
                         <version>2.3.6</version>
                       </dependency>
 
-    <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
-                      <dependency>
-                        <groupId>com.google.code.gson</groupId>
-                        <artifactId>gson</artifactId>
-                        <version>2.3</version>
-                      </dependency>
-
-
-    <!-- https://mvnrepository.com/artifact/net.sf.json-lib/json-lib -->
-                      <dependency>
-                        <groupId>net.sf.json-lib</groupId>
-                        <artifactId>json-lib</artifactId>
-                        <version>2.2.2</version>
-                      </dependency>
-
-    <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
-                      <dependency>
-                        <groupId>ch.qos.logback</groupId>
-                        <artifactId>logback-core</artifactId>
-                        <version>1.1.2</version>
-                      </dependency>
 
   </dependencies>
   <build>
