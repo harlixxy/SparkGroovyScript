@@ -55,9 +55,9 @@ class GroovyScriptRDDSuite extends SparkFunSuite with SharedSparkContext {
     val lines = sc.makeRDD(Array("a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4"
     ,"a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4","a:2,v0:4,t:4"),1)
     //compute
-    val maps = lines.map(line => line)
 
-    val res = maps.groovyCompute(scriptTexts)
+
+    val res = lines.groovyCompute(scriptTexts)
     val resarray = res.collect()
     resarray.foreach(println)
     assert("a"==="a")
