@@ -32,7 +32,9 @@ private[spark]class GroovyScriptRDD[T: ClassTag](prev: RDD[T],
            *
            */
          TaskContext.setTaskContext(context)
+
          val iterator: Iterator[Any] = firstParent[T].iterator(split,context)
+
 
          var results: util.Map[String, _]=new util.HashMap[String,Object]()
          //scriptTexts是参数
@@ -51,6 +53,7 @@ private[spark]class GroovyScriptRDD[T: ClassTag](prev: RDD[T],
          ctx1.restore(enumStatus)
          val timestamp = now
          val computeExecutor = new ComputeExecutor(timestamp,executor)
+         println("first"+iterator)
          val  hashmapres = getDataPointHashMap(requireName,iterator,executor,timestamp)
          results = computeExecutor.executorStartRun(executor,hashmapres,ctx1)
 
@@ -60,7 +63,7 @@ private[spark]class GroovyScriptRDD[T: ClassTag](prev: RDD[T],
          val keysiterator: util.Iterator[String] = keys.iterator();
          val valuesIterator:util.Iterator[_] = values.iterator();
 
-     //返回结果
+     //返回结
          var resIterator:Iterator[String] = new Iterator[String] {
            def next(): String = {
              if (!hasNext()) {
@@ -78,55 +81,34 @@ private[spark]class GroovyScriptRDD[T: ClassTag](prev: RDD[T],
              result
            }
          }
-     //返回结果
+     //返回结
          resIterator
   }//compute 结束了
   def getDataPointHashMap(requireName:util.HashMap[String,Object], iterator: Iterator[Any],executor: Executor,timestamp:Long) : util.HashMap[String,DataPoint] ={
-    var maps:Map[String,Long] = scala.collection.immutable.Map[String,Long]()
-    while (iterator.hasNext){
-      val keyAndValue = iterator.next()
-      println("keyAndValue is :"+keyAndValue)
-      //判断key value类型
+    val preRddMap = new util.HashMap[String,java.lang.Long]()
 
-//      if(keyAndValue.isInstanceOf[Tuple2[String,Long]]){
-//        val tuple2 = keyAndValue.asInstanceOf[Tuple2]
-//        val map = Map(tuple2._1->tuple2._2)
-//        maps += (tuple2._1.toString -> tuple2._2)
-//        println("okok")
-//      }
- //     val map = keyAndValue.toString.toMap
-   //     if("Tuple2"==keyAndValue.getClass.getSimpleName){
-     //     println(keyAndValue.getClass.getSimpleName)
-       // }
-     // maps ++ map
+    for(elem <- iterator){
+      println("elem"+elem)
+      val splits = elem.toString.split(",")
+      for(keyAndValue<- splits){
+        preRddMap.put(keyAndValue.split(":")(0),java.lang.Long.parseLong(keyAndValue.split(":")(1)))
+      }
 
     }
-    println(maps)
-
+    println(preRddMap)
     val resHashMap = new util.HashMap[String, DataPoint]() {
       val sets:util.Set[String] = executor.getIndefine.keySet
       val keysiterator = sets.iterator()
       while (keysiterator.hasNext){
         val next = keysiterator.next()
-        println("key is :"+next)
-        put(next.toString,new DataPoint(timestamp,434))
-
-        //从iterator中选择一个对应的值给该 key(即 next.toString)对应的值赋值
-
+              println("next is"+next)
+              println("get next"+preRddMap.get(next))
+              put(next,new DataPoint(timestamp,12))
       }
-
     }
-
     return resHashMap
-
   }
-
 }
-
 import org.apache.spark.internal.Logging
-
-
 object GroovyScriptRDD extends Logging{
-
-
 }

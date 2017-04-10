@@ -124,50 +124,50 @@ public class Main {
                                     if(0 < count && count <= 10){
 
                                         if(s.equals("devStatus")){
-                                            DataPoint dataPoint = put(s, new DataPoint(timestamp , 8.974120221842469));
+                                            DataPoint dataPoint = put(s, new DataPoint(timestamp , 4443));
                                         }
                                         if(s.equals("yggl")){
-                                            put(s, new DataPoint(timestamp, 521.5876961512264));
+                                            put(s, new DataPoint(timestamp, 34));
                                         }
                                         if(s.equals("alm1")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 434));
                                         }
                                         if(s.equals("alm2")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 43));
                                         }
                                         if(s.equals("alm3")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 344));
                                         }
                                         if(s.equals("alm4")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 343));
                                         }
                                         if(s.equals("alm5")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 343));
                                         }
                                         if(s.equals("alm6")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 3434));
                                         }
                                         if(s.equals("alm7")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 43));
                                         }
                                         if(s.equals("alm8")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 434));
                                         }
                                         if(s.equals("alm9")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 3434));
                                         }
                                         if(s.equals("fengsu")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 3434));
                                         }
 
                                         if(s.equals("fengxang")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 4343));
                                         }
                                         if(s.equals("cangwWd")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 434));
                                         }
                                         if(s.equals("yeYali")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 434));
                                         }
 
 
@@ -268,22 +268,22 @@ public class Main {
                                         }
                                     }else if(30 < count && count <= 40){
                                         if(s.equals("devStatus")){
-                                            DataPoint dataPoint = put(s, new DataPoint(timestamp , 8.974120221842469));
+                                            DataPoint dataPoint = put(s, new DataPoint(timestamp , 0));
                                         }
                                         if(s.equals("yggl")){
-                                            put(s, new DataPoint(timestamp, 521.5876961512264));
+                                            put(s, new DataPoint(timestamp, 0));
                                         }
                                         if(s.equals("alm1")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 0));
                                         }
                                         if(s.equals("alm2")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 0));
                                         }
                                         if(s.equals("alm3")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 0));
                                         }
                                         if(s.equals("alm4")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 0));
                                         }
                                         if(s.equals("alm5")){
                                             put(s, new DataPoint(timestamp , 353.29892862945206));
@@ -588,7 +588,7 @@ public class Main {
                                         }
 
                                         if(s.equals("fengxang")){
-                                            put(s, new DataPoint(timestamp , 353.29892862945206));
+                                            put(s, new DataPoint(timestamp , 24234.44));
                                         }
                                         if(s.equals("cangwWd")){
                                             put(s, new DataPoint(timestamp , 353.29892862945206));
@@ -606,7 +606,7 @@ public class Main {
                     } catch (Exception ex) {
                         ex.printStackTrace();
                     }
-
+System.out.println("resultsresultsresultsresultsresultsresultsresultsresultsresults"+results);
 
                     LOGGER.info("############  END [" + count + "]  ############");
                     System.out.println();

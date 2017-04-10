@@ -791,7 +791,14 @@ abstract class RDD[T: ClassTag](
        enumStatus,requireNames)
 
   }
+  def groovyCompute(scriptTexts: String): RDD[String] ={
+    var enumStatus:java.util.Map[String,Object] = new java.util.HashMap[String,Object]() // can be empty
+    val requireNames = new java.util.HashMap[String,Object]()//can be emptey
 
+    new GroovyScriptRDD(this,
+      scriptTexts,
+      enumStatus,requireNames)
+  }
 
 
   /**
