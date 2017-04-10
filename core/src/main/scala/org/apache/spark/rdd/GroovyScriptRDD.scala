@@ -37,7 +37,7 @@ private[spark]class GroovyScriptRDD[T: ClassTag](prev: RDD[T],
 
 
          var results: util.Map[String, _]=new util.HashMap[String,Object]()
-         //scriptTexts是参数
+         
          val executor = new Executor(scriptTexts);
          executor.prepare();
          var now = 1300000000000L
